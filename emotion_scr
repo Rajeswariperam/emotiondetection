@@ -61,3 +61,10 @@ pipeline {
         }
     }
 }
+
+sudo apt-get install docker.io
+git remote add origin <https url>
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+sudo docker build –t mywebapp .
+  sudo docker run –d –p 80:80 mywebapp
